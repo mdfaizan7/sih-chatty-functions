@@ -15,7 +15,7 @@ exports.getConversations = (req, res) => {
           Convs.push({
             ConvId: doc.id,
             creator: doc.data().creator,
-            time: new Date().toISOString(),
+            time: doc.data().time,
             ConvName: doc.data().ConvName,
             createdWith: doc.data().createdWith
           });
